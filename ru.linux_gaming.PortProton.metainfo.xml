@@ -113,10 +113,11 @@
 	<content_rating type="oars-1.1"/>
 
 	<releases>
-		<release version="1.7.4" date="2025-09-18">
+		<release version="1.7.4" date="2025-09-25">
 			<description>
 				<ul>
 					<li>added translate url to metainfo</li>
+					<li>added commit and file checksum verification across multiple sources to prevent falsification</li>
 				</ul>
 			</description>
 		</release>
