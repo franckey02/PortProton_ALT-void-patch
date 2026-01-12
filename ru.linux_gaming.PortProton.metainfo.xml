@@ -113,9 +113,10 @@
 	<content_rating type="oars-1.1"/>
 
 	<releases>
-		<release version="1.7.4" date="2025-09-25">
+		<release version="1.7.4" date="2026-01-12">
 			<description>
 				<ul>
+					<li>added portproton:// handler for ppdb.linux-gaming.ru</li>
 					<li>added translate url to metainfo</li>
 					<li>added commit and file checksum verification across multiple sources to prevent falsification</li>
 				</ul>
