@@ -10,7 +10,6 @@ Type=Application
 Exec=portproton %u
 Icon=ru.linux_gaming.PortProton
 MimeType=application/x-wine-extension-msp;application/x-msi;application/x-ms-dos-executable;text/win-bat;x-scheme-handler/portproton;
-MimeType=application/x-ms-dos-executable;application/x-wine-extension-msp;application/x-msi;application/x-msdos-program;application/x-ms-shortcut;text/win-bat;x-scheme-handler/portproton;
 StartupNotify=true
 Terminal=false
 Keywords[ru]=wine;windows;game;
