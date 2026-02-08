@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Usamos $HOME para el directorio del usuario actual
+USER_DIR="$HOME/PortProton"
+USER_SCRIPT="$USER_DIR/data/scripts/start.sh"
+SYS_SCRIPT="/usr/bin/port-proton"
+
+# Verificar argumentos
+if [ $# -eq 0 ]; then
+    ARG="%u"
+else
+    ARG="$1"
+fi
+
+# Priorizar la versión del usuario si existe
+if [ -d "$USER_DIR" ] && [ -f "$USER_SCRIPT" ]; then
+    # Hacer ejecutable si no lo es
+    [ ! -x "$USER_SCRIPT" ] && chmod +x "$USER_SCRIPT" 2>/dev/null
+    echo "Usando PortProton de usuario..."
+    exec "$USER_SCRIPT" "$ARG"
+elif [ -f "$SYS_SCRIPT" ] && [ -x "$SYS_SCRIPT" ]; then
+    echo "Usando PortProton del sistema..."
+    exec "$SYS_SCRIPT" "$ARG"
+else
+    echo "Error: No se encontró PortProton instalado" >&2
+    exit 1
+fi
